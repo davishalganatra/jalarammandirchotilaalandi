@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jalaram Mandir, Chotila - Official Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-video {
+            position: relative;
+            height: 100vh;
+            min-height: 500px;
+            overflow: hidden;
+        }
+        
+        .hero-video video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 99;
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="https://r.mobirisesite.com/1119289/assets/images/final-logo-bg-171x139.jpg" alt="Jalaram Mandir Logo" class="h-12 w-12 mr-3">
+                <div>
+                    <h1 class="title-font text-xl font-bold text-orange-600">Jalaram Mandir</h1>
+                    <p class="text-xs text-gray-600">Chotila, Gujarat</p>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <div class="dropdown relative">
+                    <button class="flex items-center text-gray-700 hover:text-orange-600 font-medium">
+                        About <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu absolute hidden mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-50">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">About Us</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Jalaram Bapa</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown relative">
+                    <button class="flex items-center text-gray-700 hover:text-orange-600 font-medium">
+                        Explore <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu absolute hidden mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-50">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Temple</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Gaushala</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Aarti Darshan</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown relative">
+                    <button class="flex items-center text-gray-700 hover:text-orange-600 font-medium">
+                        Activities <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu absolute hidden mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-50">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Sadavrat</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Medical Services</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Events</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown relative">
+                    <button class="flex items-center text-gray-700 hover:text-orange-600 font-medium">
+                        Facilities <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu absolute hidden mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-50">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Guest House</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">360 View</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown relative">
+                    <button class="flex items-center text-gray-700 hover:text-orange-600 font-medium">
+                        Gallery <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu absolute hidden mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-50">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Photo Gallery</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Video Gallery</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Aerial View</a>
+                    </div>
+                </div>
+                
+                <a href="#" class="text-gray-700 hover:text-orange-600 font-medium">Atithi Gruh</a>
+                <a href="#" class="text-gray-700 hover:text-orange-600 font-medium">Contact</a>
+                <a href="#" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md font-medium transition duration-300">Donate</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white py-2 px-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <div class="accordion">
+                    <button class="flex justify-between items-center w-full text-gray-700 hover:text-orange-600 font-medium py-2">
+                        About <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">About Us</a>
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Jalaram Bapa</a>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <button class="flex justify-between items-center w-full text-gray-700 hover:text-orange-600 font-medium py-2">
+                        Explore <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Temple</a>
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Gaushala</a>
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Aarti Darshan</a>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <button class="flex justify-between items-center w-full text-gray-700 hover:text-orange-600 font-medium py-2">
+                        Activities <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Sadavrat</a>
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Medical Services</a>
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Events</a>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <button class="flex justify-between items-center w-full text-gray-700 hover:text-orange-600 font-medium py-2">
+                        Facilities <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Guest House</a>
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">360 View</a>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <button class="flex justify-between items-center w-full text-gray-700 hover:text-orange-600 font-medium py-2">
+                        Gallery <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Photo Gallery</a>
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Video Gallery</a>
+                        <a href="#" class="block pl-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600">Aerial View</a>
+                    </div>
+                </div>
+                
+                <a href="#" class="text-gray-700 hover:text-orange-600 font-medium py-2">Atithi Gruh</a>
+                <a href="#" class="text-gray-700 hover:text-orange-600 font-medium py-2">Contact</a>
+                <a href="#" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md font-medium transition duration-300 text-center">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="hero-video">
+        <video autoplay muted loop>
+            <source src="https://www.youtube.com/embed/5uPVA385SZ4?autoplay=1&amp;mute=0&amp;controls=0&amp;enablejsapi=1&amp;allowfullscreen=true&amp;iv_load_policy=3&amp;modestbranding=1&amp;origin=https%3A%2F%2Fjalarammandirchotila.mobirisesite.com&amp;rel=0&amp;mode=transparent&amp;showinfo=0&amp;html5=1&amp;version=3&amp;playerapiid=iframe_YTP_1624972482514&amp;widgetid=3&amp;forigin=https%3A%2F%2Fjalarammandirchotila.mobirisesite.com%2F&amp;aoriginsup=1&amp;vf=1" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 flex items-center justify-center h-full text-center px-4">
+            <div class="max-w-4xl mx-auto text-white">
+                <h1 class="title-font text-4xl md:text-6xl font-bold mb-4">Discover Jalaram Mandir, Chotila</h1>
+                <h2 class="text-2xl md:text-3xl mb-6">Experience the Divine</h2>
+                <p class="text-lg md:text-xl mb-8">Explore and Enjoy at Jalaram Mandir</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">Plan Your Visit</a>
+                    <a href="#" class="bg-white hover:bg-gray-100 text-orange-600 px-6 py-3 rounded-md font-medium transition duration-300">Virtual Tour</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-gray-800 mb-4">Discover the Unique Features</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Experience the divine serenity and facilities that ensure a fulfilling visit for all devotees</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-temple"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Mandir</h3>
+                    <p class="text-gray-600">Experience the divine serenity of our sacred temple dedicated to Jalaram Bapa.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Swagatam</h3>
+                    <p class="text-gray-600">Receive a warm welcome at our visitor center with all necessary information.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Enjoy Park</h3>
+                    <p class="text-gray-600">Relax with your family in our beautifully maintained park area.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-cow"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Gaudham</h3>
+                    <p class="text-gray-600">Visit our sacred cowshed, a symbol of devotion and care for all living beings.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-briefcase-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Medical Services</h3>
+                    <p class="text-gray-600">Access our healthcare outreach programs serving the community.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Parking</h3>
+                    <p class="text-gray-600">Convenient parking facilities available for all visitors.</p>
+                </div>
+                
+                <!-- Feature 7 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Dedicated Office</h3>
+                    <p class="text-gray-600">Central hub for all your inquiries and assistance needs.</p>
+                </div>
+                
+                <!-- Feature 8 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Sadavrat</h3>
+                    <p class="text-gray-600">Free meals served to all devotees as part of our seva tradition.</p>
+                </div>
+                
+                <!-- Feature 9 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Guest House</h3>
+                    <p class="text-gray-600">Comfortable accommodation for devotees visiting from afar.</p>
+                </div>
+                
+                <!-- Feature 10 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Security</h3>
+                    <p class="text-gray-600">Safe and peaceful environment maintained for all visitors.</p>
+                </div>
+                
+                <!-- Feature 11 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Devotional Practices</h3>
+                    <p class="text-gray-600">Join Nagar-Yatra, Maha-Abhishekam and other sacred rituals.</p>
+                </div>
+                
+                <!-- Feature 12 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Other Facilities</h3>
+                    <p class="text-gray-600">Wheelchair access, clean restrooms and other amenities for your comfort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updates Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-gray-800 mb-4">What's New at Jalaram Mandir?</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Latest festivals, events and temple announcements</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Today's Aarti -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-orange-600 text-white py-3 px-6">
+                        <h3 class="text-xl font-semibold">Today's Aarti (21-01-2025)</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-100">
+                                <span class="font-medium">Mangla Aarti</span>
+                                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">5:30 AM</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-100">
+                                <span class="font-medium">Shringar Aarti</span>
+                                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">8:00 AM</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-100">
+                                <span class="font-medium">Sandhya Aarti</span>
+                                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">6:30 PM</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="font-medium">Shayan Aarti</span>
+                                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">8:30 PM</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-4 inline-block text-orange-600 hover:text-orange-700 font-medium">View Full Schedule <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Upcoming Events -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-orange-600 text-white py-3 px-6">
+                        <h3 class="text-xl font-semibold">Upcoming Events</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-orange-100 text-orange-800 rounded-lg p-3 mr-4 text-center">
+                                    <div class="font-bold text-lg">25</div>
+                                    <div class="text-sm">JAN</div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Jalaram Jayanti Celebration</h4>
+                                    <p class="text-sm text-gray-600">Special puja and cultural programs</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-orange-100 text-orange-800 rounded-lg p-3 mr-4 text-center">
+                                    <div class="font-bold text-lg">14</div>
+                                    <div class="text-sm">FEB</div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Maha Shivratri</h4>
+                                    <p class="text-sm text-gray-600">Night-long vigil and special abhishekam</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-orange-100 text-orange-800 rounded-lg p-3 mr-4 text-center">
+                                    <div class="font-bold text-lg">25</div>
+                                    <div class="text-sm">MAR</div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Ram Navami</h4>
+                                    <p class="text-sm text-gray-600">Procession and bhajan sandhya</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-orange-600 hover:text-orange-700 font-medium">View All Events <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Yearly Festivals -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-orange-600 text-white py-3 px-6">
+                        <h3 class="text-xl font-semibold">Yearly Festivals</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Major Celebrations</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Jalaram Jayanti</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Ram Navami</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Janmashtami</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Diwali</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Holi</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Maha Shivratri</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Special Programs</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Nagar Yatra</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Maha Abhishekam</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Bhajan Sandhya</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Annakut Utsav</span>
+                            </div>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-orange-600 hover:text-orange-700 font-medium">Festival Calendar <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-gray-800 mb-4">Moments of Devotion and Joy</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Glimpse into spiritual gatherings and cultural celebrations</p>
+            </div>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button type="button" class="gallery-tab active px-6 py-3 text-sm font-medium rounded-l-lg bg-orange-600 text-white" data-tab="photos">
+                        Photo Gallery
+                    </button>
+                    <button type="button" class="gallery-tab px-6 py-3 text-sm font-medium border-t border-b border-gray-200 bg-white text-gray-700 hover:bg-gray-50" data-tab="videos">
+                        Video Gallery
+                    </button>
+                    <button type="button" class="gallery-tab px-6 py-3 text-sm font-medium rounded-r-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50" data-tab="aerial">
+                        Aerial View
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Photo Gallery (Active by default) -->
+            <div class="gallery-content active grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="photos">
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://source.unsplash.com/random/600x400/?temple" alt="Temple View" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Morning Aarti</h3>
+                        <p class="text-sm text-gray-600">Devotees during morning prayers</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://source.unsplash.com/random/600x400/?festival" alt="Festival" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Jalaram Jayanti</h3>
+                        <p class="text-sm text-gray-600">Annual celebration of Jalaram Bapa</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://source.unsplash.com/random/600x400/?prayer" alt="Prayer" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Devotees Praying</h3>
+                        <p class="text-sm text-gray-600">Moments of devotion</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://source.unsplash.com/random/600x400/?cow" alt="Gaushala" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Gaushala</h3>
+                        <p class="text-sm text-gray-600">Sacred cows at our gaushala</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://source.unsplash.com/random/600x400/?food" alt="Sadavrat" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Sadavrat</h3>
+                        <p class="text-sm text-gray-600">Free meal service for all</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://source.unsplash.com/random/600x400/?procession" alt="Procession" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Nagar Yatra</h3>
+                        <p class="text-sm text-gray-600">Annual procession through town</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://source.unsplash.com/random/600x400/?flowers" alt="Flowers" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Temple Decorations</h3>
+                        <p class="text-sm text-gray-600">Festival decorations</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://source.unsplash.com/random/600x400/?crowd" alt="Crowd" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Festival Gathering</h3>
+                        <p class="text-sm text-gray-600">Devotees during special event</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video Gallery (Hidden by default) -->
+            <div class="gallery-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="videos">
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Morning Aarti Live</h3>
+                        <p class="text-sm text-gray-600">Experience the divine morning prayers</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Jalaram Jayanti 2024</h3>
+                        <p class="text-sm text-gray-600">Highlights from the annual celebration</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Temple Tour</h3>
+                        <p class="text-sm text-gray-600">Guided tour of the temple complex</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Nagar Yatra Procession</h3>
+                        <p class="text-sm text-gray-600">Annual procession through Chotila</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Maha Abhishekam</h3>
+                        <p class="text-sm text-gray-600">Special ritual ceremony</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800">Bhajan Sandhya</h3>
+                        <p class="text-sm text-gray-600">Devotional singing evening</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Aerial View (Hidden by default) -->
+            <div class="gallery-content hidden" id="aerial">
+                <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden shadow-md">
+                    <iframe class="w-full h-96" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="mt-4 text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Aerial View of Jalaram Mandir</h3>
+                    <p class="text-gray-600">Experience the grandeur of our temple from above</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-orange-600 hover:bg-orange-700">
+                    View Full Gallery
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Mission Section -->
+    <section class="py-16 bg-gradient-to-r from-orange-500 to-orange-600">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h2 class="title-font text-3xl md:text-4xl font-bold mb-6">Support the Spiritual Mission</h2>
+                <p class="text-xl mb-8">Your contributions help us maintain the temple, provide free meals through Sadavrat, offer medical services, and organize spiritual programs that touch thousands of lives.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="bg-white hover:bg-gray-100 text-orange-600 px-8 py-4 rounded-md font-medium text-lg transition duration-300 flex items-center justify-center">
+                        <i class="fas fa-hotel mr-2"></i> Book Guest House
+                    </a>
+                    <a href="#" class="bg-orange-800 hover:bg-orange-900 text-white px-8 py-4 rounded-md font-medium text-lg transition duration-300 flex items-center justify-center">
+                        <i class="fas fa-donate mr-2"></i> Donate Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Find answers to common questions about visiting Jalaram Mandir</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left">
+                        <h3 class="text-lg font-medium text-gray-800">What are the temple's visiting hours?</h3>
+                        <i class="fas fa-chevron-down text-orange-500"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0 text-gray-600">
+                            <p>The temple is open daily from 5:00 AM to 9:00 PM. During special festivals and occasions, the temple may remain open for extended hours. The aarti timings are as follows:</p>
+                            <ul class="mt-2 space-y-1">
+                                <li><span class="font-medium">Mangla Aarti:</span> 5:30 AM</li>
+                                <li><span class="font-medium">Shringar Aarti:</span> 8:00 AM</li>
+                                <li><span class="font-medium">Sandhya Aarti:</span> 6:30 PM</li>
+                                <li><span class="font-medium">Shayan Aarti:</span> 8:30 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left">
+                        <h3 class="text-lg font-medium text-gray-800">How can I reach Jalaram Mandir, Chotila?</h3>
+                        <i class="fas fa-chevron-down text-orange-500"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0 text-gray-600">
+                            <p>Jalaram Mandir is located in Chotila, Gujarat, approximately 50 km from Rajkot. You can reach the temple by:</p>
+                            <ul class="mt-2 space-y-2">
+                                <li><span class="font-medium">By Road:</span> Well-connected by state highways. Regular buses and taxis available from Rajkot, Ahmedabad, and other major cities.</li>
+                                <li><span class="font-medium">By Train:</span> The nearest railway station is Rajkot (50 km away). From there, you can take a bus or taxi to Chotila.</li>
+                                <li><span class="font-medium">By Air:</span> The nearest airport is Rajkot Airport (55 km away).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left">
+                        <h3 class="text-lg font-medium text-gray-800">Can I book a Pooja or Seva in advance?</h3>
+                        <i class="fas fa-chevron-down text-orange-500"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0 text-gray-600">
+                            <p>Yes, you can book special poojas and sevas in advance through our online portal or by contacting the temple office. Some of the sevas that can be booked include:</p>
+                            <ul class="mt-2 space-y-1">
+                                <li>Abhishekam</li>
+                                <li>Satyanarayan Katha</li>
+                                <li>Special Aarti</li>
+                                <li>Annadanam (Food offering)</li>
+                            </ul>
+                            <p class="mt-2">For more information and booking, please visit our <a href="#" class="text-orange-600 hover:underline">Seva Booking</a> page.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left">
+                        <h3 class="text-lg font-medium text-gray-800">Are accommodation and food facilities available?</h3>
+                        <i class="fas fa-chevron-down text-orange-500"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0 text-gray-600">
+                            <p>Yes, Jalaram Mandir provides the following facilities for devotees:</p>
+                            <ul class="mt-2 space-y-2">
+                                <li><span class="font-medium">Atithi Gruh (Guest House):</span> Comfortable accommodation is available for devotees. Rooms can be booked in advance through our <a href="#" class="text-orange-600 hover:underline">Guest House Booking</a> system.</li>
+                                <li><span class="font-medium">Sadavrat (Free Meal Service):</span> The temple provides free meals to all visitors twice daily (lunch and dinner). The dining hall is open from 11:30 AM to 2:30 PM and 7:00 PM to 9:00 PM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left">
+                        <h3 class="text-lg font-medium text-gray-800">How can I make a donation to the temple?</h3>
+                        <i class="fas fa-chevron-down text-orange-500"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0 text-gray-600">
+                            <p>Donations can be made through various methods:</p>
+                            <ul class="mt-2 space-y-2">
+                                <li><span class="font-medium">Online:</span> Visit our <a href="#" class="text-orange-600 hover:underline">Donation Portal</a> to make a secure online donation.</li>
+                                <li><span class="font-medium">Bank Transfer:</span> You can transfer funds directly to the temple's bank account (details available on request).</li>
+                                <li><span class="font-medium">In-Person:</span> Donation boxes are available throughout the temple complex.</li>
+                                <li><span class="font-medium">Cheque/DD:</span> Payable to "Jalaram Mandir Trust" can be sent to the temple office.</li>
+                            </ul>
+                            <p class="mt-2">All donations are eligible for tax exemption under Section 80G of the Income Tax Act.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">About Jalaram Mandir</h3>
+                    <p class="text-gray-300 mb-4">Jalaram Mandir in Chotila is a sacred shrine dedicated to Jalaram Bapa, a revered saint known for his selfless service and devotion.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Activities</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Facilities</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Gallery</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Atithi Gruh</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Donate</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <address class="not-italic text-gray-300">
+                        <div class="flex items-start mb-3">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-400"></i>
+                            <span>Jalaram Mandir, Chotila<br>Gujarat - 363520, India</span>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-envelope mr-3 text-orange-400"></i>
+                            <a href="mailto:info@jalarammandirchotila.in" class="hover:text-white">info@jalarammandirchotila.in</a>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-phone-alt mr-3 text-orange-400"></i>
+                            <a href="tel:+912800123456" class="hover:text-white">+91 2800 123 456</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-fax mr-3 text-orange-400"></i>
+                            <span>+91 2800 123 455</span>
+                        </div>
+                    </address>
+                </div>
+                
+                <!-- Feedback Form -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Feedback</h3>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-3">
+                            <textarea placeholder="Your Message" rows="3" class="w-full px-4 py-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded font-medium transition duration-300">Submit</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="mb-8 rounded-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.123456789012!2d71.12345678901234!3d21.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDA3JzI0LjQiTiA3McKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="pt-6 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2025 Jalaram Mandir, Chotila. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-700 transition duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Accordion functionality for mobile menu
+        const accordions = document.querySelectorAll('.accordion');
+        accordions.forEach(accordion => {
+            const button = accordion.querySelector('button');
+            const content = accordion.querySelector('.accordion-content');
+            
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !isExpanded);
+                content.style.maxHeight = isExpanded ? '0' : content.scrollHeight + 'px';
+                
+                // Rotate icon
+                const icon = button.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Gallery Tab Switching
+        const galleryTabs = document.querySelectorAll('.gallery-tab');
+        const galleryContents = document.querySelectorAll('.gallery-content');
+        
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                galleryTabs.forEach(t => t.classList.remove('active', 'bg-orange-600', 'text-white'));
+                galleryContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active', 'bg-orange-600', 'text-white');
+                
+                // Show corresponding content
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const content = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle content
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
